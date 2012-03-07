@@ -17,7 +17,7 @@ module ActionView::Helpers::FormOptionsHelper
     if country
       state_options += options_for_select(eval(country.upcase+'_STATES'), selected)
     end
-    return state_options
+    return state_options.html_safe
   end
 
   private
